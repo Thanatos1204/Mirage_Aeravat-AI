@@ -1,19 +1,13 @@
-// pages/index.js
-'use client'
-import React from 'react';
-import RectangleScreen from './components/RectangleScreen';
-import Layout from './components/Layout';
-import Nav from './components/Navbar';
-import { TypewriterEffectSmooth } from './components/ui/typewriter-effect';
+"use client";
+import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
-const World = dynamic(() => import("./components/ui/globe").then((m) => m.World), {
+const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
   ssr: false,
 });
 
-const Home = () => {
-
+export function GlobeDemo() {
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -400,91 +394,36 @@ const Home = () => {
     },
   ];
 
-  const words = [
-    {
-      text: "Detect",
-    },
-    {
-      text: "Deep",
-    },
-    {
-      text: "Fakes",
-    },
-    {
-      text: "with",
-    },
-    {
-      text: "Mirage!",
-      className: "text-blue-500 dark:text-blue-500",
-    },
-  ];
-
-
   return (
-    <Layout>
-      <Nav></Nav>
-      <div className="flex flex-col items-center justify-center h-[40rem]  ">
-      <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
-        Not everything you See is Real
-      </p>
-      <TypewriterEffectSmooth words={words} />
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-        <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
-          Join now
-        </button>
-        <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
-          Signup
-        </button>
+    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
+      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="div"
+        >
+          <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
+            We sell soap worldwide
+          </h2>
+          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+            This globe is interactive and customizable. Have fun with it, and
+            don&apos;t forget to share it. :)
+          </p>
+        </motion.div>
+        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+          <World data={sampleArcs} globeConfig={globeConfig} />;
+        </div>
       </div>
     </div>
-      <div className="flex justify-center">
-        <div className="w-4/5 h-screen flex items-center justify-between relative">
-          <RectangleScreen>
-            <h2 className="text-2xl text-black font-bold mb-4">Defend Against DeepFakes and Informantion Warfare</h2>  
-            <p className='text-black'>We Help Enterprises Stop the Threat of Deepfakes through a Leading AI-Based Protection Platform.</p>
-          </RectangleScreen>
-          <motion.div
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 1,
-              }}
-              className="div"
-            >
-            </motion.div>
-            <div className="relative h-1/2 p-5 inset-0 flex items-center justify-center"> {/* Center the World component */}
-              <World data={sampleArcs} globeConfig={globeConfig} />
-            </div>
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-4/5 h-screen flex items-center justify-center">
-          <RectangleScreen>
-            <h2 className="text-2xl text-black font-bold mb-4">Section 2</h2>
-            <p className='text-black'>This is the content of section 2. Ut consequat ligula eget turpis ullamcorper, vel fermentum odio viverra. Vivamus scelerisque sem eu lacus iaculis volutpat.</p>
-            <p className='text-black'>This is more content of section 2. Nulla facilisi. Morbi feugiat vestibulum tortor, vel pretium enim lacinia ac.</p>
-            {/* Add more content as needed */}
-          </RectangleScreen>
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-4/5 h-screen flex items-center justify-center">
-          <RectangleScreen>
-            <h2 className="text-2xl text-black font-bold mb-4">Section 3</h2>
-            <p className='text-black'>This is the content of section 3. Curabitur vestibulum, augue non placerat fermentum, magna elit tempor dui, eget tincidunt urna lorem eget elit.</p>
-            <p className='text-black'>This is more content of section 3. Sed ut nisi a neque posuere malesuada ac ut leo.</p>
-            {/* Add more content as needed */}
-          </RectangleScreen>
-        </div>
-      </div>
-    </Layout>
   );
-};
-
-export default Home;
+}
