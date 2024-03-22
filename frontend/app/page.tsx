@@ -2,10 +2,16 @@
 import React from 'react';
 import RectangleScreen from './components/RectangleScreen';
 import Layout from './components/Layout';
+import Nav from './components/Navbar';
 
 const Home = () => {
+
+  
+
+
   return (
     <Layout>
+      <Nav></Nav>
       <div className="py-20">
         <h1 className="text-4xl font-bold text-center text-white">Welcome to DepthFake</h1>
       </div>
@@ -13,8 +19,7 @@ const Home = () => {
         <div className="w-4/5 h-screen flex items-center justify-center">
           <RectangleScreen>
             <h2 className="text-2xl text-black font-bold mb-4">Section 1</h2>
-            <p className='text-black'>This is the content of section 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed purus auctor, feugiat velit vel, tempor velit.</p>
-            <p className='text-black'>This is more content of section 1. Duis vitae dapibus nunc. Nullam nec arcu vel nibh feugiat dictum sed quis nisi.</p>
+           <video src='/rotation.gif' className='z-10'></video>
             {/* Add more content as needed */}
           </RectangleScreen>
         </div>
