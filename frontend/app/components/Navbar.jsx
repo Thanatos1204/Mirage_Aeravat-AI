@@ -4,7 +4,7 @@ const Nav = () => {
     const [state, setState] = useState(false);
 
     const navigation = [
-        { title: "Features", path: "/" },
+        { title: "Features", path: "#features" },
         { title: "News", path: "#news" },
         { title: "Customers", path: "/" },
         { title: "Try It Out", path: "/" }

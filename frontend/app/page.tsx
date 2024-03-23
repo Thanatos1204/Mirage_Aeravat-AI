@@ -432,11 +432,14 @@ const Home = () => {
       <TypewriterEffectSmooth words={words} />
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
         <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
-          Join now
+          Try Now!
         </button>
+        <a href='#news'>
         <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
-          Signup
+          Our Blogs
         </button>
+        </a>
+        
       </div>
     </div>
       <div className="flex justify-center">
@@ -474,7 +477,7 @@ const Home = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="w-4/5 mt-80 h-screen flex items-center justify-center">
+        <div id='features' className="w-4/5 mt-80 h-screen flex items-center justify-center">
           <RectangleScreen>
             <Feature/>
             {/* Add more content as needed */}
