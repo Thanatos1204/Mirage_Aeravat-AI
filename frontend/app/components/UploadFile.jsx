@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 
-const Uploader = () => {
+const Uploader = ({ onFileChange }) => {
  const [selectedFile, setSelectedFile] = useState(null);
  const [previewUrl, setPreviewUrl] = useState(null);
 
- const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setSelectedFile(file);
-      const url = URL.createObjectURL(file);
-      setPreviewUrl(url);
-    }
- };
+
 
  return (
     <div className="max-w-md h-40 rounded-lg border-2 border-dashed flex items-center justify-center">
@@ -24,7 +17,7 @@ const Uploader = () => {
         </>            
         )}
       </label>
-      <input id="file" type="file" className="hidden" onChange={handleFileChange} />
+      <input id="file" type="file" className="hidden" onChange={onFileChange} />
       {previewUrl && (<div className='flex justify-center items-center'>
       <h1 className='text-xl text-black font-bold '>Preview: </h1>
         <video className='flex justify-center items-center m-5' width="320" height="240" controls>

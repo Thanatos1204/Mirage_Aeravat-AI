@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Uploader from '../components/UploadFile';
 import Layout from '../components/Layout';
 import RectangleScreen from '../components/RectangleScreen';
+import Nav from '../components/Navbar';
 
 const Upload = () => {
  const [videoPreviewUrl, setVideoPreviewUrl] = useState(null);
@@ -17,7 +18,8 @@ const Upload = () => {
 
  return (
     <Layout>
-      <div className="flex justify-center">
+        <Nav></Nav>
+      <div className="flex justify-center">   
         <div className="w-4/5 h-screen text-center flex items-center self-center justify-center">
           <RectangleScreen>
             <Uploader onFileChange={handleFileChange} />
