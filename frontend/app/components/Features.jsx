@@ -29,12 +29,12 @@ const Feature = () => {
 
     return (
         <section className="py-14">
-            <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+            <div className="max-w-screen-xl mx-auto px-4 text-white-600 md:px-8">
                 <div className="max-w-xl space-y-3">
                     <h3 className="text-indigo-600 font-semibold">
                         Features
                     </h3>
-                    <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                    <p className="text-white-800 text-3xl font-semibold sm:text-4xl">
                         Do more with less complexity
                     </p>
                     <p>
@@ -49,7 +49,7 @@ const Feature = () => {
                                     <div className="w-12 h-12 border text-indigo-600 rounded-full flex items-center justify-center">
                                         {item.icon}
                                     </div>
-                                    <h4 className="text-lg text-gray-800 font-semibold">
+                                    <h4 className="text-lg text-white-800 font-semibold">
                                         {item.title}
                                     </h4>
                                     <p>

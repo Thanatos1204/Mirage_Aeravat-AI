@@ -62,10 +62,10 @@ const Blog = () => {
     return (
         <section className="mt-12 mx-auto px-4 max-w-screen-xl md:px-8">
             <div className="text-center">
-                <h1 className="text-3xl text-gray-800 font-semibold">
+                <h1 className="text-3xl text-white-800 font-semibold">
                     Read Our Blogs
                 </h1>
-                <p className="mt-3 text-gray-500">
+                <p className="mt-3 text-white-500">
                     The News on Deep Fakes. Updates every Hour.
                 </p>
             </div>
@@ -80,15 +80,15 @@ const Blog = () => {
                                         <img src={items.authorLogo} className="w-full h-full rounded-full" alt={items.authorName} />
                                     </div>
                                     <div className="ml-3">
-                                        <span className="block text-gray-900">{items.authorName}</span>
-                                        <span className="block text-gray-400 text-sm">{items.date}</span>
+                                        <span className="block text-white-900">{items.authorName}</span>
+                                        <span className="block text-white-400 text-sm">{items.date}</span>
                                     </div>
                                 </div>
                                 <div className="pt-3 ml-4 mr-2 mb-3">
-                                    <h3 className="text-xl text-gray-900">
+                                    <h3 className="text-xl" style={{ color: '#A1CDFF' }}>
                                         {items.title}
                                     </h3>
-                                    <p className="text-gray-400 text-sm mt-1">{items.desc}</p>
+                                    <p className="text-white-400 text-sm mt-1">{items.desc}</p>
                                 </div>
                             </a>
                         </article>
