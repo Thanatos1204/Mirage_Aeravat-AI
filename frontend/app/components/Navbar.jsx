@@ -20,15 +20,15 @@ const Nav = () => {
     return (
         <nav className={`bg-white mt-5 pb-5 md:text-sm ${state ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0" : ""}`}
         style={{
-            background: 'rgba(255, 255, 255, 0.2)', // Semi-transparent background
+            background: 'rgba(255, 255, 255, 0.1)', // Semi-transparent background
             backdropFilter: 'blur(20px)', // Blur effect
             boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.18)', // Subtle shadow
-            borderRadius: '20px', // Rounded corners
-            border: '1px solid rgba(255, 255, 255, 0.25)', // Thin border
+            borderRadius: '24px', // Rounded corners
+            border: '1px solid  rgba(209, 213, 219, 0.18)', 
         }}>
-            <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+            <div className="gap-x-14 items-center,items-middle, max-w-screen-xl mx-auto px-4 md:flex md:px-8">
                 <div className="flex items-center justify-between py-5 md:block">
-                    <a href="/" style={{ display: 'block', paddingTop: '10px' }}>
+                    <a href="/" style={{ display: 'block', paddingTop: '15px' }}>
                         <img
                             src="logo.png"
                             width={60}
@@ -56,9 +56,9 @@ const Nav = () => {
                     </div>
                 </div>
                 <div className={`flex-1 items-center mt-8 md:mt-0 md:flex ${state ? 'block' : 'hidden'} `}>
-                    <ul className="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+                    <ul className="justify-center items-center,paddingTop:15px ,space-y-6 md:flex md:space-x-6 md:space-y-0">
                         {navigation.map((item, idx) => (
-                            <li key={idx} className="text-white hover:text-gray-900" style={{ fontSize: '1.2rem' }}>
+                            <li key={idx} className="text-white hover:text-black" style={{ fontSize: '1.2rem' }}>
                                 <a href={item.path} className="block">
                                     {item.title}
                                 </a>
