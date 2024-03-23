@@ -5,9 +5,9 @@ const Nav = () => {
 
     const navigation = [
         { title: "Features", path: "/" },
-        { title: "News", path: "/" },
+        { title: "News", path: "#news" },
         { title: "Customers", path: "/" },
-        { title: "Pricing", path: "/" }
+        { title: "Try It Out", path: "/" }
     ];
 
     useEffect(() => {

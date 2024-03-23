@@ -7,6 +7,8 @@ import Nav from './components/Navbar';
 import { TypewriterEffectSmooth } from './components/ui/typewriter-effect';
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import Blog from './components/BlogPosts';
+import Feature from './components/Features';
 
 const World = dynamic(() => import("./components/ui/globe").then((m) => m.World), {
   ssr: false,
@@ -438,7 +440,7 @@ const Home = () => {
       </div>
     </div>
       <div className="flex justify-center">
-        <div className="w-4/5 h-screen flex items-center justify-between relative">
+        <div className="w-4/5 -mt-40 h-screen flex items-center justify-between relative">
           <RectangleScreen>
             <h2 className="text-2xl text-black font-bold mb-4">Defend Against DeepFakes and Information Warfare</h2>  
             <p className='text-black'>We Help Enterprises Stop the Threat of Deepfakes through a Leading AI-Based Protection Platform.</p>
@@ -464,21 +466,17 @@ const Home = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="w-4/5 h-screen flex items-center justify-center">
+        <div id='news' className="w-4/5 mt-60 h-screen flex items-center justify-center">
           <RectangleScreen>
-            <h2 className="text-2xl text-black font-bold mb-4">Section 2</h2>
-            <p className='text-black'>This is the content of section 2. Ut consequat ligula eget turpis ullamcorper, vel fermentum odio viverra. Vivamus scelerisque sem eu lacus iaculis volutpat.</p>
-            <p className='text-black'>This is more content of section 2. Nulla facilisi. Morbi feugiat vestibulum tortor, vel pretium enim lacinia ac.</p>
+            <Blog/>
             {/* Add more content as needed */}
           </RectangleScreen>
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="w-4/5 h-screen flex items-center justify-center">
+        <div className="w-4/5 mt-80 h-screen flex items-center justify-center">
           <RectangleScreen>
-            <h2 className="text-2xl text-black font-bold mb-4">Section 3</h2>
-            <p className='text-black'>This is the content of section 3. Curabitur vestibulum, augue non placerat fermentum, magna elit tempor dui, eget tincidunt urna lorem eget elit.</p>
-            <p className='text-black'>This is more content of section 3. Sed ut nisi a neque posuere malesuada ac ut leo.</p>
+            <Feature/>
             {/* Add more content as needed */}
           </RectangleScreen>
         </div>
