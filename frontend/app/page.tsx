@@ -425,8 +425,8 @@ const Home = () => {
   return (
     <Layout>
       <Nav></Nav>
-      <div className="flex flex-col items-center justify-center h-[40rem]  ">
-      <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+      <div className="flex flex-col items-center -mt-36 justify-center h-[40rem]  ">
+      <p style={{ fontSize: '1.5rem' }} className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
         Not everything you See is Real
       </p>
       <TypewriterEffectSmooth words={words} />
@@ -445,8 +445,8 @@ const Home = () => {
       <div className="flex justify-center">
         <div className="w-4/5 -mt-40 h-screen flex items-center justify-between relative">
           <RectangleScreen>
-            <h2 className="text-2xl text-black font-bold mb-4">Defend Against DeepFakes and Information Warfare</h2>  
-            <p className='text-black'>We Help Enterprises Stop the Threat of Deepfakes through a Leading AI-Based Protection Platform.</p>
+            <h2 className="text-2xl text-white font-bold mb-4">Defend Against DeepFakes and Information Warfare</h2>  
+            <p className='text-white'>We Help Enterprises Stop the Threat of Deepfakes through a Leading AI-Based Protection Platform.</p>
           </RectangleScreen>
           <motion.div
               initial={{
