@@ -445,7 +445,7 @@ const Home = () => {
       <div className="flex justify-center">
         <div className="w-4/5 -mt-40 h-screen flex items-center justify-between relative">
           <RectangleScreen>
-            <h2 className="text-2xl text-black font-bold mb-4">Defend Against DeepFakes and Informantion Warfare</h2>  
+            <h2 className="text-2xl text-black font-bold mb-4">Defend Against DeepFakes and Information Warfare</h2>  
             <p className='text-black'>We Help Enterprises Stop the Threat of Deepfakes through a Leading AI-Based Protection Platform.</p>
           </RectangleScreen>
           <motion.div
